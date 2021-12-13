@@ -9,12 +9,63 @@
     <!-- -------------- -->
     <!-- Style CSS Here -->
     <!-- -------------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #111;
+            font-family: 'Galada', cursive;
+        }
+        h2 {
+            color: transparent;
+            display: flex;
+            font-size: 5vw;
+        }
+        h2 span {
+            animation: animate .3s linear infinite;
+            animation-delay: calc(0.1s * var(--ui));
+        }
+        @keyframes animate {
+            0% {
+                color: #fff;
+                filter: blur(1px) hue-rotate(0deg);
+                text-shadow: 0 0 10px #f10a3c,
+                0 0 20px #f10a3c,
+                0 0 40px #f10a3c,
+                0 0 80px #f10a3c,
+                0 0 120px #f10a3c,
+                0 0 200px #f10a3c,
+                0 0 300px #f10a3c,
+                0 0 400px #f10a3c;
+            }
+            30%,70% {
+                color: #fff;
+                filter: blur(1px) hue-rotate(360deg);
+                text-shadow: 0 0 10px #f10a3c,
+                0 0 20px #f10a3c,
+                0 0 40px #f10a3c,
+                0 0 80px #f10a3c,
+                0 0 120px #f10a3c,
+                0 0 200px #f10a3c;
+            }
+            100% {
+                color: transparent;
+                box-shadow: none;
+                filter: blur(2px) hue-rotate(0deg);
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- <h1>১৬ই ডিসেম্বর আমাদের বিজয় দিবস</h1> -->
-
     <h2>
         <span style="--ui:1;">১</span>
         <span style="--ui:2;">৬</span>
@@ -34,6 +85,5 @@
         <span style="--ui:16;">ব</span>
         <span style="--ui:17;">স</span>
     </h2>
-
 </body>
 </html>
