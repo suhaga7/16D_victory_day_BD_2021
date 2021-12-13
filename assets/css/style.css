@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+:root {--text-color: #f10a3c;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Galada', cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #111;
+}
+
+h2 {
+    color: transparent;
+    display: flex;
+    font-size: 5vw;
+}
+
+h2 span {
+    animation: animate .3s linear infinite;
+    animation-delay: calc(0.1s * var(--ui));
+}
+
+@keyframes animate {
+    0% {
+        color: #fff;
+        filter: blur(1px) hue-rotate(0deg);
+        text-shadow: 0 0 10px var(--text-color),
+        0 0 20px var(--text-color),
+        0 0 40px var(--text-color),
+        0 0 80px var(--text-color),
+        0 0 120px var(--text-color),
+        0 0 200px var(--text-color),
+        0 0 300px var(--text-color),
+        0 0 400px var(--text-color);
+    }
+    30%,70% {
+        color: #fff;
+        filter: blur(1px) hue-rotate(360deg);
+        text-shadow: 0 0 10px var(--text-color),
+        0 0 20px var(--text-color),
+        0 0 40px var(--text-color),
+        0 0 80px var(--text-color),
+        0 0 120px var(--text-color),
+        0 0 200px var(--text-color);
+    }
+    100% {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
